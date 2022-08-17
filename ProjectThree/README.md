@@ -1,5 +1,5 @@
 # CS210_Cplusplus
-projects for CS210 
+Project Three
 
 Summarize the project and what problem it was solving:
 Grocery Tracking program built to  accept a text file containing items purchased.  Data then seperated into a list of items and quanties sold.  Menu loop gave user a choice of printing all items/quantities sold as a numberic value, look up the frequency of one specific item or view a histogram of all items/frequencies.  Created to meet specifications which included what functions should be completed in C++ and which should be done in Python.  This allowed user to better organize store based off of frequency of items being sold. 
