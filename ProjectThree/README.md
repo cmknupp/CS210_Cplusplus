@@ -1,35 +1,22 @@
 # CS210_Cplusplus
 projects for CS210 
 
-Grocery Tracking program built to the following specifications. 
+Summarize the project and what problem it was solving:
+Grocery Tracking program built to  accept a text file containing items purchased.  Data then seperated into a list of items and quanties sold.  Menu loop gave user a choice of printing all items/quantities sold as a numberic value, look up the frequency of one specific item or view a histogram of all items/frequencies.  Created to meet specifications which included what functions should be completed in C++ and which should be done in Python.  This allowed user to better organize store based off of frequency of items being sold. 
 
-One of Python's strengths is its ability to search through text and process large amounts of data, so that programming language will be used to manage internal functions of the program you create. Alternatively, C++ will be used to interface with users who are interested in using the prototype tracking program.
+What did you do particularly well?
+I followed specifications and had all functions working correctly.  I attempted to write clean code that did not contain redundancy.  Output was well formatted and easy to interpret.  
 
-Grocery Tracking Program
-Begin with a Visual Studio project file that has been set up correctly to work with both C++ and Python, as you have done in a previous module. Remember to be sure you are working in Release mode, rather than Debug mode. Then add the CS210_Starter_CPP_Code and CS210_Starter_PY_Code files, linked in the Supporting Materials section, to their appropriate tabs within the project file so that C++ and Python will be able to effectively communicate with one another. After you have begun to code, you will also wish to access the CS210_Project_Three_Input_File, linked in the Supporting Materials section, to check the functionality and output of your work.
+Where could you enhance your code? How would these improvements make your code more efficient, secure, and so on?
+I am not sure we've learned much about keeping code secure yet.  I made it able to handle exceptions that my occur but would like to learn more on how to increase security of code. I also would like to better understand the "wrappers" for calling the Python functions that were provided. 
 
-As you work, continue checking your code’s syntax to ensure your code will run. Note that when you compile your code, you will be able to tell if this is successful overall because it will produce an error message for any issues regarding syntax. Some common syntax errors are missing a semicolon, calling a function that does not exist, not closing an open bracket, or using double quotes and not closing them in a string, among others.
+Which pieces of the code did you find most challenging to write, and how did you overcome this? I originally thought to pass the input file name as the string parameter to Python and ran into issues when I had to pass the item name to Python. I was thinking the users may want to interpret many files as frequency of items purchased would likely change based on season/holidays and such. I was unsure how to pass two parameters and started to write code to combine the file name and item name in a string with a seperator that Python could then parse out.  I then realized I was making it too complicated.  I added the input File name to Python and then just passed the item name. 
 
-Use C++ to develop a menu display that asks users what they would like to do. Include options for each of the three requirements outlined in the scenario and number them 1, 2, and 3. You should also include an option 4 to exit the program. All of your code needs to effectively validate user input.
-Create code to determine the number of times each individual item appears. Here you will be addressing the first requirement from the scenario to produce a list of all items purchased in a given day along with the number of times each item was purchased. Note that each grocery item is represented by a word in the input file. Reference the following to help guide how you can break down the coding work.
-Write C++ code for when a user selects option 1 from the menu. Select and apply a C++ function to call the appropriate Python function, which will display the number of times each item (or word) appears.
-Write Python code to calculate the frequency of every word that appears from the input file. It is recommended that you build off the code you have already been given for this work.
-Use Python to display the final result of items and their corresponding numeric value on the screen.
-Create code to determine the frequency of a specific item. Here you will be addressing the second requirement from the scenario to produce a number representing how many times a specific item was purchased in a given day. Remember an item is represented by a word and its frequency is the number of times that word appears in the input file. Reference the following to help guide how you can break down the coding work.
-Use C++ to validate user input for option 2 in the menu. Prompt a user to input the item, or word, they wish to look for. Write a C++ function to take the user’s input and pass it to Python.
-Write Python code to return the frequency of a specific word. It will be useful to build off the code you just wrote to address the first requirement. You can use the logic you wrote but modify it to return just one value; this should be a fairly simple change (about one line). Next, instead of displaying the result on the screen from Python, return a numeric value for the frequency of the specific word to C++.
-Write a C++ function to display the value returned from Python. Remember, this should be displayed on the screen in C++. We recommend reviewing the C++ functions that have already been provided to you for this work.
-Create code to graphically display a data file as a text-based histogram. Here you will be addressing the third requirement from the scenario: to produce a text-based histogram listing all items purchased in a given day, along with a representation of the number of times each item was purchased. Reference the following to help guide how you can break down the coding work:
-Use C++ to validate user input for option 3 in the menu. Then have C++ prompt Python to execute its relevant function.
-Write a Python function that reads an input file (CS210_Project_Three_Input_File, which is linked in the Supporting Materials section) and then creates a file, which contains the words and their frequencies. The file that you create should be named frequency.dat, which needs to be specified in your C++ code and in your Python code. Note that you may wish to refer to work you completed in a previous assignment where you practiced reading and writing to a file. Some of your code from that work may be useful to reuse or manipulate here. The frequency.dat file should include every item (represented by a word) paired with the number of times that item appears in the input file. For example, the file might read as follows:
-Potatoes 4
-Pumpkins 5
-Onions 3
-Write C++ code to read the frequency.dat file and display a histogram. Loop through the newly created file and read the name and frequency on each row. Then print the name, followed by asterisks or another special character to represent the numeric amount. The number of asterisks should equal the frequency read from the file. For example, if the file includes 4 potatoes, 5 pumpkins, and 3 onions then your text-based histogram may appear as represented below. However, you can alter the appearance or color of the histogram in any way you choose.
-Potatoes ****
-Pumpkins *****
-Onions ***
-Apply industry standard best practices such as in-line comments and appropriate naming conventions to enhance readability and maintainability. Remember that you must demonstrate industry standard best practices in all your code to ensure clarity, consistency, and efficiency. This includes the following:
-Using input validation and error handling to anticipate, detect, and respond to run-time and user errors (for example, make sure you have option 4 on your menu so users can exit the program)
-Inserting in-line comments to denote your changes and briefly describe the functionality of the code
-Using appropriate variable, parameter, and other naming conventions throughout your code
+What tools or resources are you adding to your support network?  
+I recently added github to my tools/support network.  As I learn more in the field I have been finding instruction videos on you-tube that better explain some of the thought processes behind writing efficient code. 
+
+What skills from this project will be particularly transferable to other projects or course work?
+Being able to integrate multiple languages and work with their benefits and around their challenges is a great skill to help with future projects.  
+
+How did you make this program maintainable, readable, and adaptable?
+I attempted to seperate any code I needed to do more than once into a seperate function to make it maintainable and adaptable.  For readability I really increased my use of comments.  I realized the value of comments during this course.  I wrote minimal comments in prior courses, I think commenting becomes more important as the complexity of projects increases.  
